@@ -1,0 +1,48 @@
+1. RectangleCalculator
+- Package: marzo17.variabili
+- Variabili (int): side1, side2, perimeter, area
+- Variabile (String): message
+- Valori: side1 = 5, side2 = 4
+- Operazioni: 
+    * perimeter = side1*2 + side2*2
+    * area = side1*side2
+- Output richiesto: "Our rectangle has a side 1 of 5, a side2 of 4, a perimeter of 18 and an area of 20"
+
+
+2. HouseCalculator
+- Package: marzo17.variabili
+- Variabili (String): address, message
+- Variabili (int): livingRoomSide1, livingRoomSide2, bedroomSide1, bedroomSide2, bathroomSide1, bathroomSide2, livingRoomArea, bathroomArea, bedroomArea, totalArea, smp (prezzo mq), priceHouse
+- Operazioni: Calcolare le singole aree, l'area totale e il prezzo finale della casa.
+- Output richiesto: Un messaggio che riassuma l'indirizzo, le dimensioni delle tre stanze (lati e area), l'area totale, il prezzo al metro quadro e il costo totale.
+
+
+3. CaloriesCalculator1
+- Package: marzo17.variabili
+- Input: nome piatto, grammi di carboidrati, proteine e grassi.
+- Calcolo kcal: 
+    * Carboidrati: 4 kcal/g
+    * Proteine: 4 kcal/g
+    * Grassi: 9 kcal/g
+- Output richiesto: Riepilogo dei dati inseriti e totale calorie (kcal).
+
+
+4. CaloriesCalculator2.java
+- Package: variabili
+-- Estensione: Gestire l'inserimento di 2 piatti distinti.
+- Aggiunta: Inserire e stampare anche il costo (prezzo) per ogni piatto.
+
+
+5. CalcoloLezioni.java
+- Package: condizioni
+- Input: lessonDuration (int), subject (String), subscriptionType (String), voucher (String).
+- Tariffe base:
+    * standard: 20 euro/h
+    * silver: 15 euro/h
+    * gold: 10 euro/h
+- Sconti materia:
+    * "sociology": -50%
+    * "java" o "salesforce": -20%
+- Sconto extra: Se voucher è "posseduto", sottrarre ulteriori 5 euro.
+- Output richiesto: Riepilogo prenotazione con tipo abbonamento, durata, materia, presenza voucher e costo finale.
+
