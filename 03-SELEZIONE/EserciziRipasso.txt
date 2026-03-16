@@ -67,7 +67,7 @@
 - Output richiesto: Un messaggio che dichiara se il triangolo è "Equilatero", "Isoscele" o "Scaleno".
 
 
-10. CalcoloLezioni
+9. CalcoloLezioni
 - Package: marzo17.condizioni
 - Input: lessonDuration (int), subject (String), subscriptionType (String), voucher (String).
 - Tariffe base:
@@ -79,3 +79,28 @@
     * "java" o "salesforce": -20% sul totale
 - Sconto extra: Se voucher è "posseduto", sottrarre ulteriori 5 euro dal totale finale.
 - Output richiesto: Riepilogo della prenotazione con tipo abbonamento, durata, materia, presenza voucher e costo finale calcolato in base a tutte le condizioni.
+
+
+ULTIMO PIÙ DIFFICILE MA GUIDATO
+10. GestoreSpedizioni
+- Package: marzo17.condizioni
+- Input: tipoPacco (String), peso (double), zonaDestinazione (int), assicurato (String).
+- Regole e Operazioni:
+    1. Calcolo Moltiplicatore Zona (usa uno SWITCH su zonaDestinazione):
+        * Caso 1 (Italia): moltiplicatore = 1.0
+        * Caso 2 (Europa): moltiplicatore = 2.5
+        * Caso 3 (Extra-UE): moltiplicatore = 5.0
+        * Default: moltiplicatore = 0.0 (codice zona errato).
+    2. Calcolo Costo Base (usa IF / ELSE-IF / ELSE su tipoPacco e peso):
+        * Se tipoPacco è "lettera": il costo base è 2.0 euro. Attenzione però: se il peso supera 0.5 kg, il costo base diventa automaticamente 5.0 euro.
+        * Se tipoPacco è "pacco": il costo base è 8.0 euro. Se però il peso supera i 5.0 kg, devi aggiungere 2.0 euro per ogni chilo in più (es. peso 7.0 kg -> 8.0 + (2.0 * 2) = 12.0 euro).
+        * Se è una stringa diversa: costo base = 0.0.
+    3. Controllo Validità (usa IF):
+        * Se il moltiplicatore è 0.0 oppure il costo base è 0.0, stampa "Errore: Dati spedizione non validi" e termina la logica (usa un else per racchiudere il resto del programma).
+    4. Calcolo Subtotale:
+        * subtotale = costo base * moltiplicatore.
+    5. Calcolo Assicurazione (usa l'OPERATORE TERNARIO):
+        * Crea una variabile tassaAssicurazione. Se la stringa 'assicurato' è uguale a "si", la tassa è il 20% del subtotale (subtotale * 0.20), altrimenti è 0.0.
+    6. Calcolo Totale:
+        * totaleFinale = subtotale + tassaAssicurazione.
+- Output richiesto: Un riepilogo dettagliato che mostri il costo base calcolato, il moltiplicatore applicato, l'eventuale costo dell'assicurazione e il totale finale da pagare.
