@@ -9,15 +9,21 @@
 - Output richiesto: "Our rectangle has a side 1 of 5, a side2 of 4, a perimeter of 18 and an area of 20"
 
 
-2. HouseCalculator
-- Package: marzo17.variabili
-- Variabili (String): address, message
-- Variabili (int): livingRoomSide1, livingRoomSide2, bedroomSide1, bedroomSide2, bathroomSide1, bathroomSide2, livingRoomArea, bathroomArea, bedroomArea, totalArea, smp (prezzo mq), priceHouse
-- Operazioni: Calcolare le singole aree, l'area totale e il prezzo finale della casa.
-- Output richiesto: Un messaggio che riassuma l'indirizzo, le dimensioni delle tre stanze (lati e area), l'area totale, il prezzo al metro quadro e il costo totale.
+2. MaggioreEta
+- Package: marzo17.condizioni
+- Input: eta (int).
+- Operazioni: Controllare se l'età è maggiore o uguale a 18 utilizzando un costrutto if-else base.
+- Output richiesto: Stampa "Sei maggiorenne" se la condizione è verificata, altrimenti "Sei minorenne".
 
 
-3. CaloriesCalculator1
+3. LoginSemplice
+- Package: marzo17.condizioni
+- Input: password (String).
+- Operazioni: Confrontare la password inserita con la stringa "Java123" usando un costrutto if-else. Nota bene: per le stringhe utilizzare il metodo .equals() invece dell'operatore ==.
+- Output richiesto: Stampa "Accesso consentito" se la password coincide, altrimenti stampa "Accesso negato".
+
+
+4. CaloriesCalculator1
 - Package: marzo17.variabili
 - Input: nome piatto, grammi di carboidrati, proteine e grassi.
 - Calcolo kcal: 
@@ -27,22 +33,49 @@
 - Output richiesto: Riepilogo dei dati inseriti e totale calorie (kcal).
 
 
-4. CaloriesCalculator2.java
-- Package: variabili
--- Estensione: Gestire l'inserimento di 2 piatti distinti.
-- Aggiunta: Inserire e stampare anche il costo (prezzo) per ogni piatto.
+5. CaloriesCalculator2
+- Package: marzo17.variabili
+- Estensione: Gestire l'inserimento di 2 piatti distinti (evoluzione dell'esercizio 4).
+- Aggiunta: Inserire e stampare anche il costo (prezzo) per ogni piatto e il totale della spesa.
+- Output richiesto: Riepilogo dei dati, totale calorie per piatto, costo singolo e costo totale.
 
 
-5. CalcoloLezioni.java
-- Package: condizioni
+6. SegnoNumero
+- Package: marzo17.condizioni
+- Input: numero (int).
+- Operazioni: Verificare tramite la cascata if, else-if ed else se il numero inserito è maggiore di zero, minore di zero o esattamente zero.
+- Output richiesto: Un messaggio che indica se il numero è "Positivo", "Negativo" oppure "Zero".
+
+
+7. CalcolatoreSconti
+- Package: marzo17.condizioni
+- Input: totaleSpesa (double).
+- Operazioni: 
+    * Se totaleSpesa > 100: calcolare il totale con il 20% di sconto.
+    * Se totaleSpesa > 50 (ma <= 100): calcolare il totale con il 10% di sconto.
+    * Altrimenti: il totale rimane invariato.
+- Output richiesto: Un messaggio che indichi l'eventuale sconto applicato e il prezzo finale da pagare.
+
+
+8. TipoTriangolo
+- Package: marzo17.condizioni
+- Input: lato1 (double), lato2 (double), lato3 (double).
+- Operazioni: Utilizzando gli operatori logici (&& e ||) in un costrutto if / else-if / else:
+    * Verificare se tutti e tre i lati sono uguali (Equilatero).
+    * Verificare se almeno due lati sono uguali tra loro (Isoscele).
+    * Se nessuna delle precedenti è vera (Scaleno).
+- Output richiesto: Un messaggio che dichiara se il triangolo è "Equilatero", "Isoscele" o "Scaleno".
+
+
+10. CalcoloLezioni
+- Package: marzo17.condizioni
 - Input: lessonDuration (int), subject (String), subscriptionType (String), voucher (String).
 - Tariffe base:
     * standard: 20 euro/h
     * silver: 15 euro/h
     * gold: 10 euro/h
 - Sconti materia:
-    * "sociology": -50%
-    * "java" o "salesforce": -20%
-- Sconto extra: Se voucher è "posseduto", sottrarre ulteriori 5 euro.
-- Output richiesto: Riepilogo prenotazione con tipo abbonamento, durata, materia, presenza voucher e costo finale.
-
+    * "sociology": -50% sul totale
+    * "java" o "salesforce": -20% sul totale
+- Sconto extra: Se voucher è "posseduto", sottrarre ulteriori 5 euro dal totale finale.
+- Output richiesto: Riepilogo della prenotazione con tipo abbonamento, durata, materia, presenza voucher e costo finale calcolato in base a tutte le condizioni.
