@@ -1,0 +1,60 @@
+1. SommaFinoAZero
+- Package: marzo19.cicli
+- Input: numero (int) - richiesto ripetutamente.
+- Strumento richiesto: Ciclo WHILE.
+- Operazioni: 
+    * Inizializza una variabile 'somma' a 0.
+    * Chiedi all'utente di inserire un numero.
+    * Usa un ciclo WHILE che continua a ciclare finché il numero inserito è diverso da 0.
+    * Ad ogni ciclo, aggiungi il numero inserito alla 'somma' e chiedi all'utente di inserire un nuovo numero.
+- Output richiesto: Quando l'utente inserisce 0 il ciclo termina e il programma stampa: "Programma terminato. La somma totale dei numeri inseriti è: [somma]".
+
+
+2. IndovinaNumero
+- Package: marzo19.cicli
+- Input: tentativo (int) - richiesto ripetutamente.
+- Strumento richiesto: Ciclo WHILE.
+- Operazioni:
+    * Imposta una variabile fissa 'numeroSegreto' (es. 42) e una variabile 'tentativi' a 0.
+    * Chiedi all'utente di indovinare il numero.
+    * Usa un ciclo WHILE che continua finché 'tentativo' è diverso da 'numeroSegreto'.
+    * Dentro il ciclo: incrementa i 'tentativi'. Se il tentativo è maggiore del numero segreto, stampa "Troppo alto!". Se è minore, stampa "Troppo basso!". Poi chiedi un nuovo tentativo.
+- Output richiesto: Quando il ciclo termina (il numero è stato indovinato), stampa: "Complimenti! Hai indovinato il numero in [tentativi] tentativi!".
+
+
+3. MenuInterattivo
+- Package: marzo19.cicli
+- Input: scelta (int) - richiesto ripetutamente.
+- Strumento richiesto: Ciclo DO-WHILE.
+- Operazioni:
+    * Usa un ciclo DO-WHILE per mostrare all'utente un menu: "1. Saluta | 2. Che ore sono? | 3. Esci".
+    * Leggi la scelta dell'utente.
+    * Usa un costrutto IF o SWITCH: se 1 stampa "Ciao!", se 2 stampa "È l'ora di programmare in Java!", se 3 stampa "Uscita in corso...". Se inserisce un altro numero stampa "Scelta non valida".
+    * La condizione del DO-WHILE deve far ripetere il menu finché 'scelta' è diversa da 3.
+- Output richiesto: La stampa del menu e delle relative risposte, fino a che l'utente non decide di uscire premendo 3.
+
+
+4. BloccoBancomat
+- Package: marzo19.cicli
+- Input: pinInserito (int) - richiesto ripetutamente.
+- Strumento richiesto: Ciclo DO-WHILE.
+- Operazioni:
+    * Imposta un 'pinCorretto' (es. 12345) e un contatore 'errori' a 0.
+    * Usa un ciclo DO-WHILE per chiedere l'inserimento del PIN.
+    * Se il PIN è sbagliato, incrementa 'errori' e stampa "PIN errato. Riprova.".
+    * Il ciclo deve ripetersi finché il PIN è sbagliato E (&&) il numero di 'errori' è minore di 3.
+    * Fuori dal ciclo, usa un IF: se il PIN inserito è uguale a quello corretto stampa l'accesso consentito, altrimenti (significa che ha fatto 3 errori) stampa il blocco della carta.
+- Output richiesto: "Accesso consentito" se indovina entro 3 tentativi, oppure "Carta bloccata per troppi tentativi falliti" al terzo errore.
+
+
+5. TabellinaMoltiplicatrice
+- Package: marzo19.cicli
+- Input: numeroBase (int).
+- Strumento richiesto: Ciclo FOR.
+- Operazioni:
+    * Chiedi all'utente di inserire un numero intero di cui vuole calcolare la tabellina.
+    * Usa un ciclo FOR con una variabile contatore 'i' che va da 1 fino a 10 compreso (i <= 10).
+    * Ad ogni iterazione, calcola il risultato moltiplicando 'numeroBase' per 'i'.
+- Output richiesto: La tabellina stampata riga per riga. Esempio per il numero 5: "5 x 1 = 5", "5 x 2 = 10", ecc., fino a 10.
+
+
